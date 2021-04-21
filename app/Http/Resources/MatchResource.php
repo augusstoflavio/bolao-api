@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Resources;
 
-use App\Models\Match;
+use App\Models\SoccerMatch;
 use App\Models\Team;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Facades\DB;
@@ -12,7 +12,7 @@ class MatchResource extends JsonResource
     public function toArray($request)
     {
         /**
-         * @var Match $match
+         * @var SoccerMatch $match
          */
         $match = $this;
 

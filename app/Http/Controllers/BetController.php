@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Bet;
-use App\Models\Match;
+use App\Models\SoccerMatch;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;
@@ -24,7 +24,7 @@ class BetController extends Controller
         ]);
 
         /**
-         * @var Match $match
+         * @var SoccerMatch $match
          */
         $match =  DB::table('matchs')->find($match);
         if (empty($match)) {
