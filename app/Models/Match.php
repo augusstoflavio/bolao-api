@@ -16,8 +16,8 @@ class Match extends Model
         'realized'
     ];
 
-    protected $dates = [
-        'date'
+    protected $casts = [
+        'date' => 'datetime',
     ];
 
     public function homeTeam(): HasOne
