@@ -16,6 +16,10 @@
 $router->group(['prefix' => 'v1'], function () use ($router) {
 
     $router->get('/', function () use ($router) {
+        echo env('DB_HOST')."<br>";
+        echo env("DB_DATABASE")."<br>";
+        echo env("DB_USERNAME")."<br>";
+        echo env("DB_PASSWORD")."<br>";
         return $router->app->version();
     });
 
