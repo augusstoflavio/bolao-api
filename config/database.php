@@ -7,6 +7,8 @@ $username = isset($url["user"]) ? $url["user"] : "";
 $password = isset($url["pass"]) ? $url["pass"] : "";
 $database = substr($url["path"], 1);
 
+dd($url);
+
 return [
     'default' => env('DB_CONNECTION', 'heroku'),
     'connections' => [
