@@ -19,7 +19,7 @@ class AuthController extends Controller
 
         $user = User::where('email', $request->input('email'))->first();
 
-        if (Hash::check($request->input('password'), $user->password)) {
+        if (!empty($user->password) && Hash::check($request->input('password'), $user->password)) {
             $apikey = Uuid::uuid4();
             User::where('email', $request->input('email'))->update(['api_key' => "$apikey"]);;
             return response()->json(['status' => 'success','api_key' => $apikey]);
