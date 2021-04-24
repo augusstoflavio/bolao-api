@@ -7,6 +7,6 @@ class Team extends Model
 {
 
     protected $fillable = [
-        'name', 'icon'
+        'name', 'icon', 'initials'
     ];
 }
