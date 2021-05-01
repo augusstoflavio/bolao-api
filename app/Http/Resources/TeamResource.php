@@ -19,7 +19,8 @@ class TeamResource extends JsonResource
         return [
             "id" => $team->id,
             "name" => $team->name,
-            "icon" => $team->icon
+            "icon" => $team->icon,
+            "initials" => $team->initials,
         ];
     }
 }
